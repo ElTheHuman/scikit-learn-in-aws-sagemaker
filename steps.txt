@@ -1,0 +1,70 @@
+SETTING UP YOUR DEVICE FOR AWS DEVELOPMENT (SETUP)
+
+    1. Install dependencies:
+        - Jupyter and Anaconda
+        - Your preferred IDE
+        - Create virtual environment* for easier development (optional)
+        - Python requirements (on requirements.txt)
+        - and more
+
+    2. Create user for AWS SageMaker:
+        1. Search for IAM and open IAM on AWS
+        2. Go to IAM resources
+        3. Press on the 'Users' number
+        4. Press on 'Create User'
+        5. Insert the user name for SageMaker
+        6. Give AdministratorAccess permission on the user
+        7. Create user
+
+    3. Create access key for AWS SageMaker:
+        1. Go to the SageMaker user that was made on step (2)
+        2. Go to 'Security credentials'
+        3. Go to 'Access keys' and press 'Create access key'
+        4. Choose the desired use case (for this project, we'll going to use CLI)
+        5. Confirm to create access key
+        6. Insert description tag value (optional)
+        7. Create access key
+        8. Download as .csv for the next steps and for easier next development
+
+    4. Configure AWS on Anaconda:
+        1. Open Anaconda prompt
+        2. Write 'aws configure' on the Anaconda prompt
+        3. Insert both Access Key ID and Secret Access Key
+        4. Insert default region name (just press enter if you don't want to change it)
+        5. Insert default output format (just press enter if you don't want to change it)
+
+    5. Create S3 bucket for cloud storage:
+        1. Search for S3 and open S3 on AWS
+        2. Create bucket
+
+STARS
+
+    Virtual environment:
+
+    - How to create virtual environment:
+        - Anaconda:
+            1. Create a new folder for your environment and workspace
+            2. Copy the folder's path (for easier creation)
+            3. Open Anaconda prompt
+            4. Write 'cd ' and paste your folder's path
+            5. Write 'conda create -p [your_env_name] python=[your_python_version] [extra_package_you_want_to_install]' or 'conda create --prefix [your_env_name] python=[your_python_version] [extra_package_you_want_to_install]'
+        
+        - Python:
+            1. Create a new folder for your environment and workspace
+            2. Copy the folder's path (for easier creation)
+            3. Open command prompt
+            4. Write 'cd ' and paste your folder's path
+            5. Write 'py -[desired_python_version] -m venv [your_env_name]'
+    
+    - Access virtual environment:
+        - Anaconda:
+            1. Open command prompt
+            2. Change directory to your environment directory
+            3. Write 'conda activate [your_env_name]/\'
+        
+        - Python:
+            1. Open command prompt
+            2. Change directory to your environment directory, then go to \Scripts
+            3. Write 'activate.bat'
+        
+        After that, you can do anything you want to the virtual environment.
